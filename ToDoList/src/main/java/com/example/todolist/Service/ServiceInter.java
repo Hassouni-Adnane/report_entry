@@ -9,5 +9,7 @@ public interface ServiceInter {
     public void save(Mylist mylist);
     public List<Mylist> showAll();
     public void update(Mylist mylist, int id);
+    public void delete(int id);
+    public Mylist showById(int id);
 
 }

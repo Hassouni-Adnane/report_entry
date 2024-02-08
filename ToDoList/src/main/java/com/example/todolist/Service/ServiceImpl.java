@@ -30,4 +30,15 @@ public class ServiceImpl implements ServiceInter{
         if(reqMylist.getTitle()!=null) mylist.setTitle(reqMylist.getTitle());
         if(reqMylist.getReport()!=null) mylist.setReport(reqMylist.getReport());
     }
+
+    @Override
+    public void delete(int id) {
+        repo.deleteById(id);
+    }
+
+    @Override
+    public Mylist showById(int id) {
+        return repo.findById(id).get();
+    }
+
 }

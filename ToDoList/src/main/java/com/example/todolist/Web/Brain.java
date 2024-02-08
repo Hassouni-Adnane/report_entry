@@ -31,4 +31,15 @@ public class Brain {
     public void update(@PathVariable("id") int id,@RequestBody Mylist mylist){
         serviceImpl.update(mylist, id);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public void delete(@PathVariable("id") int id){
+        serviceImpl.delete(id);
+    }
+
+    @GetMapping("show/{id}")
+    public Mylist showById(@PathVariable("id") int id){
+        return serviceImpl.showById(id);
+    }
+
 }
